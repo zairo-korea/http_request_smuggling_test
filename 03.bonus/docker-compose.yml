@@ -1,0 +1,22 @@
+          
+version: '3'
+
+services:
+    tete_backend:
+        build:
+            context: ./backend/
+            dockerfile: ./Dockerfile
+            args:
+                    base_domain: zairo.kr
+                    first_subdomain: test1
+                    second_subdomain: c
+        ports:
+             - "8080:80"
+    tete_frontend:
+        build:
+            context: ./frontend/
+            dockerfile: ./Dockerfile
+        depends_on:
+             - tete_backend
+        ports:
+             - "80:1080"

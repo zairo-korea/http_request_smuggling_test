@@ -1,0 +1,18 @@
+          
+version: '3'
+
+services:
+    clcl_backend:
+        build:
+            context: ./backend/
+            dockerfile: ./Dockerfile
+        ports:
+             - "8080:80"
+    clcl_frontend:
+        build:
+            context: ./frontend/
+            dockerfile: ./Dockerfile
+        depends_on:
+             - clcl_backend
+        ports:
+             - "80:1080"

@@ -1,0 +1,22 @@
+diff -Naur haproxy-1.9.10-origin/src/proto_http.c haproxy-1.9.10/src/proto_http.c
+--- haproxy-1.9.10-origin/src/proto_http.c	2019-08-08 20:03:18.000000000 +0000
++++ haproxy-1.9.10/src/proto_http.c	2020-07-19 10:26:26.504557670 +0000
+@@ -1075,11 +1075,17 @@
+ 
+ 	/* Chunked requests must have their content-length removed */
+ 	ctx.idx = 0;
++	/* 
++		[zairo patch]
++		- Transfer Encoding과 Content-Length가 동시에 존재할 경우 Content-Length 헤더 제거하므로 해당 부분 주석 처리
++	*/
++	/*
+ 	if (msg->flags & HTTP_MSGF_TE_CHNK) {
+ 		while (http_find_header2("Content-Length", 14, ci_head(req), &txn->hdr_idx, &ctx))
+ 			http_remove_header2(msg, &txn->hdr_idx, &ctx);
+ 	}
+-	else while (http_find_header2("Content-Length", 14, ci_head(req), &txn->hdr_idx, &ctx)) {
++	else*/ 
++	while (http_find_header2("Content-Length", 14, ci_head(req), &txn->hdr_idx, &ctx)) {
+ 		signed long long cl;
+ 
+ 		if (!ctx.vlen) {

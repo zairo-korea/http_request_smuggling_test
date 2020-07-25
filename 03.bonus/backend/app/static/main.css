@@ -1,0 +1,190 @@
+.corral {
+	margin:0 auto;
+	width:460px;
+	position:relative
+}
+
+.contentContainerBordered {
+	margin:120px auto 0;
+	padding:42px 42px 36px;
+	border:1px solid #eaeced;
+	overflow:hidden
+}
+
+.paybob-logo {
+	margin:0 auto 20px;
+	text-indent:100%;
+	overflow:hidden;
+	white-space:nowrap
+}
+
+.paybob-logo-long {
+	background:transparent url(./logo.jpg) top center no-repeat;
+	background-size:auto 28px;
+	width:129px;
+	height:32px;
+	display:block
+}
+
+.contentContainer {
+	position:relative;
+	margin:130px auto 0;
+	padding:30px 10% 50px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	-khtml-border-radius:5px;
+	border-radius:5px
+}
+
+.maskable {
+	position:relative
+}
+
+.splitform .textInput,.splitPassword .textInput {
+	margin-bottom:20px
+}
+
+.splitPhoneSection {
+	margin-bottom:20px
+}
+
+.textInput {
+	position:relative;
+	margin:0 0 10px
+}
+
+.fieldWrapper {
+	position:relative;
+	z-index:2;
+	width:100%
+}
+
+.textInput .fieldLabel {
+	position:absolute;
+	color:#6c7378;
+	clip:rect(1px 1px 1px 1px);
+	clip:rect(1px,1px,1px,1px);
+	padding:0;
+	border:0;
+	height:1px;
+	width:1px;
+	overflow:hidden
+}
+.textInput input:not([type=submit]):not([type=radio]):not([type=checkbox]) {
+	-webkit-background-clip:padding-box;
+	-moz-background-clip:padding-box;
+	background-clip:padding-box;
+	-webkit-transition:border .2s ease-in-out,background-color .2s ease-in-out;
+	-moz-transition:border .2s ease-in-out,background-color .2s ease-in-out;
+	-o-transition:border .2s ease-in-out,background-color .2s ease-in-out;
+	transition:border .2s ease-in-out,background-color .2s ease-in-out
+}
+.footer {
+	position:fixed;
+	bottom:0;
+	left:0;
+	right:0;
+	font-size:11px;
+	padding-top:14px
+}
+.footer .legalFooter {
+	text-align:center;
+	padding:14px;
+	background-color:#F7F9FA
+}
+.footer .legalFooter a,.footer .legalFooter a:link,.footer .legalFooter a:visited,.footer .legalFooter a:hover {
+	color:#666;
+	white-space:nowrap
+}
+.footerGroup {
+	list-style-type:none;
+	text-align:center
+}
+.footerGroup li {
+	display:inline-block;
+	margin:0 10px 0 0
+}
+.footerGroup li a,.footerGroup li a:link,.footerGroup li a:visited,.footerGroup li a:hover {
+	color:#666;
+	white-space:nowrap
+}
+.footerGroup li:last-child {
+	margin:0
+}
+.footerGroupWithSiblings {
+	float:left;
+	padding:0;
+	background:0 0
+}
+.footerCopyright {
+	margin:0;
+	text-align:right;
+	color:#9e9e9e
+}
+.footerDisclaimer {
+	margin:0;
+	padding:7px 0 0;
+	clear:both;
+	color:#9e9e9e;
+	text-align:left
+}
+.textInput input,.textInput textarea {
+	height:44px;
+	width:100%;
+	padding:0 10px;
+	border:1px solid #9da3a6;
+	background:#fff;
+	text-overflow:ellipsis;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	color:#000;
+	font-size:1em;
+	font-family:Helvetica,Arial,sans-serif;
+	font-weight:400;
+	/*! @noflip */direction:ltr
+}
+a.button,a.button:link,a.button:visited,.button {
+	width:100%;
+	min-height:44px;
+	padding:0;
+	border:0;
+	display:block;
+	background-color:#0070ba;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	-khtml-border-radius:4px;
+	border-radius:4px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	cursor:pointer;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+	-o-appearance:none;
+	appearance:none;
+	-webkit-tap-highlight-color:transparent;
+	color:#fff;
+	font-size:1em;
+	text-align:center;
+	font-weight:700;
+	font-family:HelveticaNeue-Medium,"Helvetica Neue Medium",HelveticaNeue,"Helvetica Neue",Helvetica,Arial,sans-serif;
+	text-shadow:none;
+	text-decoration:none;
+	-webkit-transition:background-color .4s ease-out;
+	-moz-transition:background-color .4s ease-out;
+	-o-transition:background-color .4s ease-out;
+	transition:background-color .4s ease-out;
+	-webkit-font-smoothing:antialiased
+}

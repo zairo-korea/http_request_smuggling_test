@@ -1,0 +1,22 @@
+diff -Naur haproxy-1.9.10-origin/src/proto_http.c haproxy-1.9.10/src/proto_http.c
+--- haproxy-1.9.10-origin/src/proto_http.c	2019-08-08 20:03:18.000000000 +0000
++++ haproxy-1.9.10/src/proto_http.c	2020-07-19 08:22:12.012577189 +0000
+@@ -1097,10 +1097,14 @@
+ 			goto return_bad_req;
+ 		}
+ 
+-		if ((msg->flags & HTTP_MSGF_CNT_LEN) && (msg->chunk_len != cl)) {
+-			msg->err_pos = ctx.line + ctx.val - ci_head(req);
+-			goto return_bad_req; /* already specified, was different */
+-		}
++		/* 
++			[zairo patch]
++			- Content-Length가 두 개 이상 존재할 경우 Bad Reqeust 처리하므로 해당 부분 주석 처리
++		*/
++		//if ((msg->flags & HTTP_MSGF_CNT_LEN) && (msg->chunk_len != cl)) {
++		//	msg->err_pos = ctx.line + ctx.val - ci_head(req);
++		//	goto return_bad_req; /* already specified, was different */
++		//}
+ 
+ 		msg->flags |= HTTP_MSGF_CNT_LEN;
+ 		msg->body_len = msg->chunk_len = cl;

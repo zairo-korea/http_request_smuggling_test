@@ -1,0 +1,8 @@
+Flask
+Jinja2
+MarkupSafe
+Werkzeug
+argparse
+itsdangerous
+gevent
+flask-csp
