@@ -2,17 +2,17 @@
 version: '3'
 
 services:
-    clte_backend:
+    clte_practice_backend:
         build:
             context: ./backend/
             dockerfile: ./Dockerfile
         ports:
              - "8080:80"
-    clte_frontend:
+    clte_practice_frontend:
         build:
             context: ./frontend/
             dockerfile: ./Dockerfile
         depends_on:
-             - clte_backend
+             - clte_practice_backend
         ports:
              - "80:1080"
