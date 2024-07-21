@@ -17,6 +17,7 @@ COPY app /deploy/app
 RUN sed -i -e "s/@@BASE_DOMAIN@@/$base_domain/g" /deploy/app/hello.py && \
     sed -i -e "s/@@FIRST_SUBDOMAIN@@/$first_subdomain/g" /deploy/app/hello.py && \
     sed -i -e "s/@@SECOND_SUBDOMAIN@@/$second_subdomain/g" /deploy/app/hello.py
+RUN python3 -m pip install -U pip setuptools wheel
 RUN python3 -m pip install -r /deploy/app/requirements.txt
 RUN python3 -m pip install --upgrade psutil
 WORKDIR /deploy/app
